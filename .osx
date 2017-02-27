@@ -1,4 +1,4 @@
-## OS X
+# OS X
 
 # Enable tap to click
 # Test: May need to add sudo to front
@@ -38,8 +38,7 @@ defaults write com.apple.screensaver askForPasswordDelay -int 0
 systemsetup -setrestartfreeze on
 
 
-
-## FINDER
+# FINDER
 
 # Show hidden files
 defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app
@@ -58,6 +57,3 @@ defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool true
 # Use list view in all Finder windows by default
 # Four-letter codes for the other view modes: `icnv`, `clmv`, `Flwv`
 # defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
-
-
-
