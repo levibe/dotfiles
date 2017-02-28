@@ -1,0 +1,5 @@
+<snippet>
+	<content><![CDATA[process.exit(${1:0})$0]]></content>
+	<tabTrigger>pe</tabTrigger>
+	<description>process.exit</description>
+</snippet>
