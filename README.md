@@ -1,2 +1,5 @@
-# dotfiles
-Configurations for OS X
+# Configurations
+
+## How to install
+
+- Copy .bash_profile to your home directory
