@@ -19,12 +19,21 @@ alias -- -="cd -"
 # Shortcuts
 alias d="cd ~/Desktop"
 alias db="cd ~/Dropbox\ \(Personal\)"
-alias dm="cd ~/Dropbox\ \(Momentum\)"
 alias dl="cd ~/Downloads"
 alias p="cd ~/Projects"
 alias g="git"
 alias h="history"
 alias j="jobs"
+
+# Momentum specific
+alias dm="cd ~/Dropbox\ \(Momentum\)"
+alias m="cd ~/Projects/momentum-extension"
+alias ma="cd ~/Projects/momentum-addins"
+alias mm="cd ~/Projects/momentum-admin"
+alias ms="cd ~/Projects/momentum-site"
+alias tax="cd ~/Projects/momo-stripey"
+alias ga="gulp addins"
+alias nrd="npm run dev"
 
 # Show colors by default
 alias ls="ls -G"
