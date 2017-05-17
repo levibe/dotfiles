@@ -37,6 +37,17 @@ defaults write com.apple.screensaver askForPasswordDelay -int 0
 # Restart automatically if the computer freezes
 systemsetup -setrestartfreeze on
 
+# Lower keyboard pause before repeating
+# Normal minimum is 15 (225ms)
+defaults write NSGlobalDomain InitialKeyRepeat -int 15
+
+# Speed up keyboard repeat rate
+# Normal minimum is 2 (30ms)
+# Set to less to speed up more
+defaults write NSGlobalDomain KeyRepeat -int 0
+
+
+
 
 # FINDER
 
