@@ -34,6 +34,8 @@ alias ms="cd ~/Projects/momentum-site"
 alias tax="cd ~/Projects/momo-stripey"
 alias ga="gulp addins"
 alias nrd="npm run dev"
+alias qa="cp -R ~/Projects/momentum-extension/dist/ ~/Dropbox\ \(Momentum\)/Momentum\ Team\ Folder/QA/Momentum\ Chrome/"
+
 
 # Show colors by default
 alias ls="ls -G"
