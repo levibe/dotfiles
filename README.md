@@ -25,6 +25,10 @@
 4. Click on the new *Levi* profile in the left sidebar and click *Default* in the bottom left.
 
 
+### Install Apple Fonts
+https://developer.apple.com/fonts/
+
+
 ## Todo
 
 - Further customize lscolors
