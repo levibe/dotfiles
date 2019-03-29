@@ -31,4 +31,5 @@ https://developer.apple.com/fonts/
 
 ## Todo
 
+- Update github repo color
 - Further customize lscolors

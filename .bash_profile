@@ -45,7 +45,7 @@ function parse_git_dirty {
 	fi
 }
 
-export PS1="\[\e[1;32m\] hi \u \[\033[00m\]\[\e[1;2m\]\t\[\033[00m\] \[\033[01;36m\]\w\[\033[00m\] \[\033[01;34m\]\`parse_git_branch\`\[\033[00m\] \\$ "
+export PS1="\[\e[1;32m\] \u \[\033[00m\]\[\e[1;2m\]\t\[\033[00m\] \[\033[01;36m\]\w\[\033[00m\] \[\033[01;34m\]\`parse_git_branch\`\[\033[00m\] \\$ "
 
 # Nicer prompt (doesn't show git branch)
 #export PS1="\[\e[1;32m\]\]\[\] \[\e[1;32m\]\]\[\u\] \[\e[0;2m\]\]\t \[\e[0;36m\]\]\w \[\e[0m\]\]\[$\] "
@@ -87,6 +87,7 @@ alias ga="gulp addins"
 alias ns="npm start"
 alias nrd="npm run dev"
 alias qa="cp -R ~/Projects/momentum-extension/dist/ ~/Dropbox\ \(Momentum\)/Momentum\ Team\ Folder/QA/Momentum\ Chrome/"
+alias run="npm start"
 
 
 # Show colors by default
@@ -128,4 +129,9 @@ alias paths='echo -e ${PATH//:/\\n}'
 
 # nvm config
 export NVM_DIR="$HOME/.nvm"
-. "/usr/local/opt/nvm/nvm.sh"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
+export PATH="/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="/usr/local/bin:/usr/local/sbin":$PATH
+
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
