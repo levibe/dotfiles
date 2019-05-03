@@ -84,8 +84,9 @@ alias md="cd ~/Projects/momentum-destinations"
 alias mq="cd ~/Projects/momentum-quotes"
 alias ms="cd ~/Projects/momentum-site"
 alias ga="gulp addins"
-alias ns="npm start"
 alias nrd="npm run dev"
+alias nrs="npm run serve"
+alias ns="npm start"
 alias qa="cp -R ~/Projects/momentum-extension/dist/ ~/Dropbox\ \(Momentum\)/Momentum\ Team\ Folder/QA/Momentum\ Chrome/"
 alias run="npm start"
 
@@ -135,3 +136,4 @@ export PATH="/usr/bin:/bin:/usr/sbin:/sbin"
 export PATH="/usr/local/bin:/usr/local/sbin":$PATH
 
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export PATH="/usr/local/opt/ruby/bin:$PATH"
