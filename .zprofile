@@ -62,7 +62,6 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
-alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
 # Shortcuts
@@ -70,25 +69,16 @@ alias d="cd ~/Desktop"
 alias db="cd ~/Dropbox\ \(Personal\)"
 alias dl="cd ~/Downloads"
 alias p="cd ~/Projects"
-alias g="git"
-alias h="history"
-alias j="jobs"
 
 # Momentum specific
 alias dm="cd ~/Dropbox\ \(Momentum\)"
 alias m="cd ~/Projects/momentum-extension"
-alias ma="cd ~/Projects/momentum-addins"
 alias mac="cd ~/Projects/momentum-account"
 alias mad="cd ~/Projects/momentum-admin"
-alias md="cd ~/Projects/momentum-destinations"
-alias mq="cd ~/Projects/momentum-quotes"
 alias ms="cd ~/Projects/momentum-site"
-alias ga="gulp addins"
-alias nrd="npm run dev"
-alias nrs="npm run serve"
 alias ns="npm start"
+alias nl="npm run lint"
 alias qa="cp -R ~/Projects/momentum-extension/dist/ ~/Dropbox\ \(Momentum\)/Momentum\ Team\ Folder/QA/Momentum\ Chrome/"
-alias run="npm start"
 
 
 # Show colors by default
