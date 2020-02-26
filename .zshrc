@@ -1,58 +1,6 @@
-# Get current branch in git repo
-function parse_git_branch() {
-    BRANCH=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
-    if [ ! "${BRANCH}" == "" ]
-    then
-	STAT=`parse_git_dirty`
-	echo "[${BRANCH}${STAT}]"
-    else
-	echo ""
-    fi
-}
-
-# Get current status of git repo
-function parse_git_dirty {
-	status=`git status 2>&1 | tee`
-	dirty=`echo -n "${status}" 2> /dev/null | grep "modified:" &> /dev/null; echo "$?"`
-	untracked=`echo -n "${status}" 2> /dev/null | grep "Untracked files" &> /dev/null; echo "$?"`
-	ahead=`echo -n "${status}" 2> /dev/null | grep "Your branch is ahead of" &> /dev/null; echo "$?"`
-	newfile=`echo -n "${status}" 2> /dev/null | grep "new file:" &> /dev/null; echo "$?"`
-	renamed=`echo -n "${status}" 2> /dev/null | grep "renamed:" &> /dev/null; echo "$?"`
-	deleted=`echo -n "${status}" 2> /dev/null | grep "deleted:" &> /dev/null; echo "$?"`
-	bits=''
-	if [ "${renamed}" == "0" ]; then
-		bits=">${bits}"
-	fi
-	if [ "${ahead}" == "0" ]; then
-		bits="*${bits}"
-	fi
-	if [ "${newfile}" == "0" ]; then
-		bits="+${bits}"
-	fi
-	if [ "${untracked}" == "0" ]; then
-		bits="?${bits}"
-	fi
-	if [ "${deleted}" == "0" ]; then
-		bits="x${bits}"
-	fi
-	if [ "${dirty}" == "0" ]; then
-		bits="!${bits}"
-	fi
-	if [ ! "${bits}" == "" ]; then
-		echo " ${bits}"
-	else
-		echo ""
-	fi
-}
-
-export PS1="\[\e[1;32m\] \u \[\033[00m\]\[\e[1;2m\]\t\[\033[00m\] \[\033[01;36m\]\w\[\033[00m\] \[\033[01;34m\]\`parse_git_branch\`\[\033[00m\] \\$ "
-
-# Nicer prompt (doesn't show git branch)
-#export PS1="\[\e[1;32m\]\]\[\] \[\e[1;32m\]\]\[\u\] \[\e[0;2m\]\]\t \[\e[0;36m\]\]\w \[\e[0m\]\]\[$\] "
-
-# Use colors
-export CLICOLOR=1
-#export LSCOLORS=ExFxCxDxBxegedabagacad
+# Customize prompt
+autoload -U colors && colors
+PS1="%{%F{10}%} %n%{$reset_color%} %{%F{8}%}%*%{$reset_color%} %{%F{6}%}${PWD/#$HOME/~}%{$reset_color%} %{%F{15}%}$%{$reset_color%} "
 
 
 # ALIASES
@@ -85,8 +33,8 @@ alias qa="cp -R ~/Projects/momentum-extension/dist/ ~/Dropbox\ \(Momentum\)/Mome
 alias ls="ls -G"
 
 # Show and hide hidden files
-alias showfiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
-alias hidefiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
+alias showhidden='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
+alias hidehidden='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 
 # Hide/show all desktop icons (useful when presenting)
 alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
@@ -127,3 +75,5 @@ export PATH="/usr/local/bin:/usr/local/sbin":$PATH
 
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 export PATH="/usr/local/opt/ruby/bin:$PATH"
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
