@@ -10,11 +10,11 @@
 
 1. Remove the current bash profile:
 
-`rm ~/.bash_profile`
+`rm ~/.zshrc`
 
 2. Set up a symlink to the repo profile, e.g.:
 
-`ln -s ~/Projects/dotfiles/.bash_profile ~/`
+`ln -s ~/Projects/dotfiles/.zshrc ~/.zshrc`
 
 
 ### Terminal
@@ -23,10 +23,6 @@
 2. In the bottom left, click the *Gear -> Import*.
 3. Find and load *Levi.terminal*.
 4. Click on the new *Levi* profile in the left sidebar and click *Default* in the bottom left.
-
-
-### Install Apple Fonts
-https://developer.apple.com/fonts/
 
 
 ## Todo
