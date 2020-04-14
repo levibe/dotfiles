@@ -1,6 +1,6 @@
 # Customize prompt
 autoload -U colors && colors
-PS1="%{%F{10}%} %n%{$reset_color%} %{%F{8}%}%*%{$reset_color%} %{%F{6}%}${PWD/#$HOME/~}%{$reset_color%} %{%F{15}%}$%{$reset_color%} "
+PS1="%{%F{10}%} %n%{$reset_color%} %{%F{8}%}%*%{$reset_color%} %{%F{6}%}%~%{$reset_color%} %{%F{15}%}$%{$reset_color%} "
 
 
 # ALIASES
