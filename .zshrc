@@ -23,11 +23,11 @@ alias dm="cd ~/Dropbox\ \(Momentum\)"
 alias m="cd ~/Projects/momentum-extension"
 alias mac="cd ~/Projects/momentum-account"
 alias mad="cd ~/Projects/momentum-admin"
-alias ms="cd ~/Projects/momentum-site"
+alias ms="cd ~/Projects/momentum-site-new"
 alias ns="npm start"
 alias nl="npm run lint"
+alias nd="npm run dev"
 alias qa="cp -R ~/Projects/momentum-extension/dist/ ~/Dropbox\ \(Momentum\)/Momentum\ Team\ Folder/QA/Momentum\ Chrome/"
-
 
 # Show colors by default
 alias ls="ls -G"
