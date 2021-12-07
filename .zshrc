@@ -24,9 +24,12 @@ alias m="cd ~/Projects/momentum-extension"
 alias mac="cd ~/Projects/momentum-account"
 alias mad="cd ~/Projects/momentum-admin"
 alias ms="cd ~/Projects/momentum-site-new"
+alias ma="cd ~/Projects/momentum-extension/source/platforms/apple/embedded-web-app"
 alias ns="npm start"
 alias nl="npm run lint"
+alias nrl="npm run lint"
 alias nd="npm run dev"
+alias nrd="npm run dev"
 alias qa="cp -R ~/Projects/momentum-extension/dist/ ~/Dropbox\ \(Momentum\)/Momentum\ Team\ Folder/QA/Momentum\ Chrome/"
 
 # Show colors by default
