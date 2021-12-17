@@ -18,6 +18,9 @@ alias db="cd ~/Dropbox\ \(Personal\)"
 alias dl="cd ~/Downloads"
 alias p="cd ~/Projects"
 
+
+alias ni="npm install"
+
 # Momentum specific
 alias dm="cd ~/Dropbox\ \(Momentum\)"
 alias m="cd ~/Projects/momentum-extension"
