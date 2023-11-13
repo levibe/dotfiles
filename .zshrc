@@ -18,22 +18,20 @@ alias db="cd ~/Dropbox\ \(Personal\)"
 alias dl="cd ~/Downloads"
 alias p="cd ~/Projects"
 
-
-alias ni="npm install"
-
 # Momentum specific
 alias dm="cd ~/Dropbox\ \(Momentum\)"
 alias m="cd ~/Projects/momentum-extension"
 alias mac="cd ~/Projects/momentum-account"
 alias mad="cd ~/Projects/momentum-admin"
-alias ms="cd ~/Projects/momentum-site-new"
+alias ms="cd ~/Projects/momentum-marketing-site"
 alias ma="cd ~/Projects/momentum-extension/source/platforms/apple/embedded-web-app"
+
+# NPM
 alias ns="npm start"
 alias nl="npm run lint"
 alias nrl="npm run lint"
 alias nd="npm run dev"
 alias nrd="npm run dev"
-alias qa="cp -R ~/Projects/momentum-extension/dist/ ~/Dropbox\ \(Momentum\)/Momentum\ Team\ Folder/QA/Momentum\ Chrome/"
 
 # Show colors by default
 alias ls="ls -G"
@@ -71,15 +69,24 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 # Print each PATH entry on a separate line
 alias paths='echo -e ${PATH//:/\\n}'
 
-
-# nvm config
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-
 export PATH="/usr/bin:/bin:/usr/sbin:/sbin"
 export PATH="/usr/local/bin:/usr/local/sbin":$PATH
 
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 
+export PATH="/usr/local/go:/usr/local/go/bin:$PATH"
+
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+# nvm config
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# auto-run nvm use where present
+if [ -f ".nvmrc" ]; then
+  nvm use > /dev/null
+else
+  nvm use default > /dev/null
+fi
