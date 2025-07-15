@@ -3,7 +3,7 @@
 ![Shell Example](https://cloud.githubusercontent.com/assets/1259364/23415643/b7dd8ac4-fd94-11e6-85ab-94fd7aa908bd.png)
 
 
-## How to install
+## How to set up
 
 ### Bash Profile
 
@@ -22,3 +22,19 @@
 2. In the bottom left, click the *••• -> Import*.
 3. Find and load *Levi.terminal*.
 4. Click on the new *Levi* profile in the left sidebar and click *Default* in the bottom left.
+
+
+### Claude Code Hooks
+
+Set up symlinks to the Claude Code configuration:
+
+```bash
+ln -s ~/Projects/dotfiles/.claude/settings.json ~/.claude/settings.json
+ln -s ~/Projects/dotfiles/.claude/play-sound.sh ~/.claude/play-sound.sh
+```
+
+This configures hooks that play sound notifications for Claude Code events:
+
+- **Stop event**: Plays "Blow" sound when Claude finishes a task
+- **Notification event**: Plays "Glass" sound for Claude notifications  
+- **Configuration**: `.claude/settings.json` with hook script `.claude/play-sound.sh`
