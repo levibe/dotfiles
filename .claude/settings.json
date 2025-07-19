@@ -5,7 +5,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": ".claude/play-sound.sh blow"
+            "command": "~/.claude/play-sound.sh blow"
           }
         ]
       }
@@ -15,7 +15,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": ".claude/play-sound.sh glass"
+            "command": "~/.claude/play-sound.sh glass"
           }
         ]
       }

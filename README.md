@@ -5,9 +5,9 @@
 
 ## How to set up
 
-### Bash Profile
+### Zsh Profile
 
-1. Remove the current bash profile:
+1. Remove the current profile:
 
 `rm ~/.zshrc`
 
@@ -24,9 +24,11 @@
 4. Click on the new *Levi* profile in the left sidebar and click *Default* in the bottom left.
 
 
-### Claude Code Hooks
+### Claude Code
 
-Set up symlinks to the Claude Code configuration:
+#### Hooks
+
+Set up symlinks to your home directory:
 
 ```bash
 ln -s ~/Projects/dotfiles/.claude/settings.json ~/.claude/settings.json
@@ -38,3 +40,12 @@ This configures hooks that play sound notifications for Claude Code events:
 - **Stop event**: Plays "Blow" sound when Claude finishes a task
 - **Notification event**: Plays "Glass" sound for Claude notifications  
 - **Configuration**: `.claude/settings.json` with hook script `.claude/play-sound.sh`
+
+
+#### Commands
+
+Set up symlinks to your home directory:
+
+```bash
+ln -s ~/Projects/dotfiles/.claude/commands ~/.claude/commands
+```
