@@ -32,6 +32,10 @@ alias nl="npm run lint"
 alias nrl="npm run lint"
 alias nd="npm run dev"
 alias nrd="npm run dev"
+# PNPM
+
+alias pd="pnpm dev"
+alias pl="pnpm lint"
 
 # Show colors by default
 alias ls="ls -G"
