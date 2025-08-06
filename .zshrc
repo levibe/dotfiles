@@ -32,6 +32,8 @@ alias nl="npm run lint"
 alias nrl="npm run lint"
 alias nd="npm run dev"
 alias nrd="npm run dev"
+alias nrdo="npm run dev -- --open"
+
 # PNPM
 
 alias pd="pnpm dev"
