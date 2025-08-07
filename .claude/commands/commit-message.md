@@ -1,2 +1,1 @@
-Please write a commit message for these changes. I will take care of the commit 
-  itself.
+Please write a commit message for these changes. I will take care of the commit itself. Please capitalize the first word of the summary.
