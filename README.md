@@ -49,3 +49,41 @@ Set up symlinks to your home directory:
 ```bash
 ln -s ~/Projects/dotfiles/.claude/commands ~/.claude/commands
 ```
+
+
+#### Clipboard Helper
+
+Set up symlink for the clipboard helper script:
+
+```bash
+ln -s ~/Projects/dotfiles/.claude/clipboard.sh ~/.claude/clipboard.sh
+```
+
+This enables Claude Code to copy text directly to your clipboard. Usage examples:
+
+```bash
+# Copy text directly
+clip "Hello, World!"
+
+# Copy file contents
+clip -f ~/.ssh/id_rsa.pub
+
+# Copy command output
+git status | clip
+
+# Copy last git commit message
+git log -1 --pretty=%B | clip
+
+# Copy last executed command (using cliplast function)
+cliplast
+
+# Copy current directory path (using clipwd function)
+clipwd
+```
+
+Particularly useful for:
+- Automatically copying generated commit messages from Claude
+- Quick text transfers from Claude to your clipboard
+- Sharing code snippets or configuration
+- Copying command outputs for documentation
+- Getting file contents or paths quickly

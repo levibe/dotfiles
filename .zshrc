@@ -39,6 +39,21 @@ alias nrdo="npm run dev -- --open"
 alias pd="pnpm dev"
 alias pl="pnpm lint"
 
+# Clipboard helper
+alias clip="~/.claude/clipboard.sh"
+
+# Function to copy last command
+cliplast() {
+    fc -ln -1 | clip
+    echo "✓ Copied last command to clipboard"
+}
+
+# Function to copy current directory path
+clipwd() {
+    pwd | clip
+    echo "✓ Copied current directory to clipboard"
+}
+
 # Show colors by default
 alias ls="ls -G"
 

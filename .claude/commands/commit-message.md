@@ -1,1 +1,1 @@
-Please write a commit message for these changes. I will take care of the commit itself. Please capitalize the first word of the summary.
+Please write a commit message for these changes and copy it to my clipboard using ~/.claude/clipboard.sh. I will take care of the commit itself. Please capitalize the first word of the summary.
