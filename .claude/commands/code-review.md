@@ -1,1 +1,1 @@
-Please use the code review agent to review this code.
+Please use the code review agent to review this code. If you are going to run tests, use `pnpm`.
