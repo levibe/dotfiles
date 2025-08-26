@@ -1,4 +1,4 @@
-Write atomic commits with clear, useful messages.
+Please commit these changes atomically, i.e. in logical groupings of commits.
 
 Format:
 - Subject line: What this commit does (imperative mood, ~50 chars)
